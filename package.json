@@ -5,11 +5,16 @@
   "main": "dist/sdq.js",
   "module": "dist/sdq.esm.js",
   "browser": "dist/sdq.umd.js",
+  "homepage": "https://github.com/developersdo/sdq",
   "repository": "git@github.com:developersdo/sdq.git",
   "author": "Rubens Mariuzzo <rubens@mariuzzo.com>",
   "license": "MIT",
+  "dependencies": {
+    "luhn-alg": "^1.0.1"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2015-rollup": "^3.0.0",
@@ -21,16 +26,20 @@
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-promise": "^3.6.0",
     "husky": "^0.14.3",
+    "jest": "^21.2.1",
     "lint-staged": "^5.0.0",
     "prettier": "1.8.2",
     "rollup": "^0.51.5",
     "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-filesize": "^1.4.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "uglify-es": "^3.1.9"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production rollup -c",
+    "test": "jest",
     "precommit": "lint-staged"
   },
   "lint-staged": {

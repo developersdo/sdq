@@ -1,0 +1,9 @@
+{
+  "name": "sdq",
+  "description": "Utility functions to validate cédula and RNC!",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:developersdo/sdq.git",
+  "author": "Rubens Mariuzzo <rubens@mariuzzo.com>",
+  "license": "MIT"
+}

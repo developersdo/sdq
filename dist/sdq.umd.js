@@ -1,4 +1,3 @@
-/*! SDQ 0.0.1 - https://github.com/developersdo/sdq - MIT */
 !(function(e, t) {
   'object' == typeof exports && 'undefined' != typeof module
     ? (module.exports = t())
@@ -10,7 +9,28 @@
       'Dynamic requires are not currently supported by rollup-plugin-commonjs'
     )
   }
-  var t = (function(e) {
+  function t(e) {
+    return (
+      'string' == typeof e &&
+      (9 === (e = e.replace(/[^\d]/g, '')).length &&
+        (function(e) {
+          e = e.split('').map(function(e) {
+            return parseInt(e, 10)
+          })
+          for (
+            var t = [7, 9, 8, 6, 5, 4, 3, 2], n = 0, r = t.length - 1;
+            r >= 0;
+            r -= 1
+          )
+            n += t[r] * e[r]
+          var o = n % 11,
+            u = void 0
+          u = 0 === o ? 2 : 1 === o ? 1 : 11 - o
+          return u === e.pop()
+        })(e))
+    )
+  }
+  var n = (function(e) {
       return e &&
         e.__esModule &&
         Object.prototype.hasOwnProperty.call(e, 'default')
@@ -21,24 +41,24 @@
         return (t = { exports: {} }), e(t, t.exports), t.exports
       })(function(t, n) {
         t.exports = (function t(n, r, o) {
-          function u(i, c) {
+          function u(i, p) {
             if (!r[i]) {
               if (!n[i]) {
-                var p = 'function' == typeof e && e
-                if (!c && p) return p(i, !0)
+                var c = 'function' == typeof e && e
+                if (!p && c) return c(i, !0)
                 if (f) return f(i, !0)
                 var s = new Error("Cannot find module '" + i + "'")
                 throw ((s.code = 'MODULE_NOT_FOUND'), s)
               }
-              var d = (r[i] = { exports: {} })
+              var a = (r[i] = { exports: {} })
               n[i][0].call(
-                d.exports,
+                a.exports,
                 function(e) {
                   var t = n[i][1][e]
                   return u(t || e)
                 },
-                d,
-                d.exports,
+                a,
+                a.exports,
                 t,
                 n,
                 r,
@@ -72,7 +92,7 @@
         )(1)
       })
     ),
-    n = [
+    r = [
       '00000000018',
       '11111111123',
       '00100759932',
@@ -112,10 +132,10 @@
       return (
         'string' == typeof e &&
         11 === (e = e.replace(/[^\d]/g, '')).length &&
-        (n.indexOf(e) > -1 || t(e))
+        (r.indexOf(e) > -1 || n(e))
       )
     },
-    isRnc: function() {}
+    isRnc: t
   }
 })
 //# sourceMappingURL=sdq.umd.js.map

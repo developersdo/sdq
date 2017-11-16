@@ -5,7 +5,25 @@ function isCedula$1(n) {
       (exceptions.indexOf(n) > -1 || luhn(n)))
   )
 }
-function isRnc$1() {}
+function isRnc$1(n) {
+  return (
+    'string' == typeof n &&
+    (9 === (n = n.replace(/[^\d]/g, '')).length && customLuhn(n))
+  )
+}
+function customLuhn(n) {
+  n = n.split('').map(function(n) {
+    return parseInt(n, 10)
+  })
+  for (
+    var e = [7, 9, 8, 6, 5, 4, 3, 2], t = 0, r = e.length - 1;
+    r >= 0;
+    r -= 1
+  )
+    t += e[r] * n[r]
+  var u = t % 11
+  return (0 === u ? 2 : 1 === u ? 1 : 11 - u) === n.pop()
+}
 import luhn from 'luhn-alg'
 var exceptions = [
     '00000000018',

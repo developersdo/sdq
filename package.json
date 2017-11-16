@@ -1,7 +1,7 @@
 {
   "name": "sdq",
   "description": "Utility functions to validate cédula and RNC!",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "dist/sdq.js",
   "module": "dist/sdq.esm.js",
   "browser": "dist/sdq.umd.js",

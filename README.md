@@ -1,10 +1,4 @@
-<div align=center>
-
-# sdq
-
-📦  Utility functions to validate cédula and RNC!
-
-</div>
+![sdq – Utility functions to validate cédula and RNC!](banner.svg)
 
 ## Features
 

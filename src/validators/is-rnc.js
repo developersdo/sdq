@@ -18,8 +18,10 @@ function isRnc(input) {
     return false
   }
 
-  // Remove any character but digits.
-  input = input.replace(/[^\d]/g, '')
+  //the input must only contains digits
+  if (input.match(/[^\d]/g)) {
+    return false
+  }
 
   // The input must contains 9 digits.
   if (input.length !== 9) {
@@ -60,7 +62,7 @@ function customLuhn(input) {
     digit = 11 - remaining
   }
 
-  // Validar el resultado con el digito validador,
-  // que en caso del RNC es el ultimo digito.
+  // Validate the result against the check digit,
+  // which in this case is the last one.
   return digit === input.pop()
 }

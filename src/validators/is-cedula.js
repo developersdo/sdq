@@ -26,8 +26,10 @@ function isCedula(input) {
     return false
   }
 
-  // Remove any character but digits.
-  input = input.replace(/[^\d]/g, '')
+  //the input must only contains digits
+  if (input.match(/[^\d]/g)) {
+    return false
+  }
 
   // The input must contains 11 digits.
   if (input.length !== 11) {

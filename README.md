@@ -49,7 +49,7 @@ sdq.isRnc('aaa-bbbbb-c')       // Returns true/false.
 
 <div align=center>
 
-Made with :heart: by [all contributors](https://github.com/rmariuzzo/react-input-handler/graphs/contributors).
+Made with :heart: by [all contributors](https://github.com/developersdo/sdq/graphs/contributors).
 
 [MIT license](LICENSE)
 
